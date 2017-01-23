@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+
+<!-- Chrome Bird Conversations !-->
+<conversation ID="BP PlatBird">
+    <node ID="Start" IfHaveQuest="The Brooder" IfNotFinishedQuestStep="The Brooder~Return to the bird" IfNotFinishedQuest="The Brooder">
+      <text>
+&amp;M*The bird is preening.  When she looks up her eyes glow bright.*&amp;y
+      </text>
+      <choice GotoID="DeliverFeathers" IfFinishedQuestStep="The Brooder~Find Feathers">Here are some feathers.</choice>
+      <choice GotoID="End">Uh, I will return.</choice>
+    </node>
+    
+    <node ID="DeliverFeathers">
+      <text>
+&amp;M*The bird takes each feather from you in turn.  The new adornmants
+&amp;Min place, she puffs herself out with a series of metallic squeaks.*&amp;y
+
+There might be something else you could do, if you wish to be privileged with the viewing of a hatching.
+ 
+  I am stalled, without nutrients, semiconductors and wires... there will be no eggs!
+      </text>
+      <choice GotoID="End" CompleteQuestStep="The Brooder~Return to the bird">Everyone wants my artifacts! ....We will see, bird.</choice>
+    </node>
+    
+    
+    <node ID="Start" IfNotHaveQuest="The Brooder">
+      <text>
+&amp;M*A bird made of chrome is here.  In a few places her skin is bare 
+&amp;Mand the metal shines, but most of the creature is covered with feathers 
+&amp;Mof all colors and sizes.  The bird turns her head and fixes you with 
+&amp;Mone brilliant eye.  Opening her beak, the bird speaks. Her voice is
+&amp;Msweet but cracked with static.*
+
+&amp;yYou know better then to bother a bird on the nest, stranger.  But maybe you could help.  Look! I am balding!
+      </text>
+      <choice GotoID="End" StartQuest="The Brooder">I know where to look for &amp;Mfeathers&amp;G for you.</choice>
+      <choice GotoID="End">I don't have time for errands right now. Live and Drink, strange bird</choice>
+    </node>
+    
+  <node ID="Start" IfHaveQuest="The Brooder" IfFinishedQuestStep="The Brooder~Return to the bird" IfNotFinishedQuestStep="The Brooder~Fetch an artifact" IfNotFinishedQuest="The Brooder">
+<text>
+&amp;M*The creature's beak is opens and she whistles softly as you approach.*&amp;y
+    <choice GotoID="ReceiveCustomRecoiler" SpecialRequirement="GiveArtifact" CompleteQuestStep="The Brooder~Fetch an artifact">(You place an artifact on the bird's plated tongue).</choice>
+    <choice GotoID="End">I don't have anything for you.</choice>
+</text>
+  </node>
+    
+    
+  <node ID="ReceiveCustomRecoiler">
+<text>
+&amp;M*The bird's beak shuts and she gulps.  There's a ringing sound as the 
+&amp;Martifact travels down its long neck.  A minute goes by and she suddenly
+&amp;Mchirps and the room fills with smoke.  As the bird shifts to the side 
+&amp;Myou see an oval shaped artifact there in the nest.  The bird rolls her 
+&amp;Mnew egg with her beak.*
+
+&amp;yNot alive. Again.. *KRRRAWKK* Take it away from me.  Boil it if you want, eat it, I don't care.
+</text>
+      <choice GotoID="End" IdGift="BP Custom Recoiler" GiveItem="BP Custom Recoiler" StartQuest="Egg Inspector">Thank you...I think. Live and drink, bird!</choice>
+    </node>
+       
+</conversation>
+
+<conversation ID="BP JoppaArgyve">
+
+    <node ID="Start" IfNotFinishedQuest="Egg Inspector" IfHaveQuest="Egg Inspector">
+<text>
+...
+ ....
+You! Still haunting me.  You need more tasks? I could use another kni... 
+Hrm?
+What is that you have there?
+
+&amp;w*Argyve takes the recoiler from you.*&amp;y
+
+Ah! ...Bah. This is a novice's work. Look, I will show you its innards.
+
+&amp;w*The old tinker shows you how the recoiler is constructed*&amp;y
+</text>
+    <choice GotoID="End" CompleteQuestStep="Egg Inspector~Find an expert">...I won't forget!</choice>
+  </node>
+  
+    <node ID="Start" IfNotHaveQuest="Fetch Argyve a Knickknack">
+      <text>
+&amp;w*mumbling*&amp;y Tensile strength of Reblon but lacking in
+dyno-elasticity; retro-threading the M-band would probably...
+
+Oh, I didn't notice you there. That's because I was ignoring you.
+
+&amp;w*mumbling*&amp;y Noting a trace yield of synthetic linseed solvent...
+      </text>
+      <choice GotoID="Find a knickknack">...</choice>
+      <choice GotoID="End">Goodbye.</choice>
+    </node>
+    <node ID="Start" IfHaveQuest="Fetch Argyve a Knickknack" IfNotFinishedQuest="Fetch Argyve a Knickknack">
+      <text>
+You're standing in my light! What do you want?
+      </text>
+      <choice GotoID="GiveKnicknack" SpecialRequirement="GiveArtifact" CompleteQuestStep="Fetch Argyve a Knickknack~Return to Argyve">Here is your knicknack.</choice>
+      <choice GotoID="End">Nothing, I will return with your knicknack.</choice>
+    </node>
+    <node ID="Start" IfFinishedQuest="Fetch Argyve a Knickknack" IfNotHaveQuest="Fetch Argyve Another Knickknack">
+      <text>
+Ah, hmmm. It appears you may be useful after all. Now go fetch me another 
+trinket!
+      </text>
+      <choice GotoID="End" StartQuest="Fetch Argyve Another Knickknack">If I must.</choice>
+    </node>
+    <node ID="GiveKnicknack" IfFinishedQuest="Fetch Argyve a Knickknack" IfNotHaveQuest="Fetch Argyve Another Knickknack">
+      <text>
+Ah, hmmm. It appears you may be useful after all. Now go fetch me another 
+trinket!
+      </text>
+      <choice GotoID="End" StartQuest="Fetch Argyve Another Knickknack">If I must.</choice>
+    </node>
+    <node ID="Find a knickknack">
+      <text>
+&amp;w*mumbling*&amp;y... Unexpected deviatiation from the Klanq constant.
+
+&amp;w*clears throat loudly*&amp;y
+
+Must you disturb me? What are you, some sort of treasure hunter? At the very least make yourself useful and bring me a &amp;Cknickknack&amp;y from one of the caves. I may reward you.
+      </text>
+      <choice GotoID="Where is the cave">Where can I find such a cave?</choice>
+      <choice GotoID="End">No, I'm not interested.</choice>
+    </node>
+    <node ID="Where is the cave">
+      <text>
+There are caves everywhere, you dolt! This is Qud! Try the rust wells, just 
+&amp;Yeast&amp;y of here.
+      </text>
+      <choice GotoID="End" StartQuest="Fetch Argyve a Knickknack">I will return with your knicknack.</choice>
+      <choice GotoID="End">No, I'm not interested.</choice>
+    </node>
+    <node ID="Start" IfHaveQuest="Fetch Argyve Another Knickknack" IfNotFinishedQuest="Fetch Argyve Another Knickknack">
+      <text>
+You're standing in my light! What do you want?
+      </text>
+      <choice GotoID="GiveAnotherKnicknack" SpecialRequirement="GiveArtifact" CompleteQuestStep="Fetch Argyve Another Knickknack~Return to Argyve">Here is your knicknack.</choice>
+      <choice GotoID="End">Nothing, I will return with your knicknack.</choice>
+    </node>
+    <node ID="GiveAnotherKnicknack">
+      <text>
+Good, good. Quite impressive, treasure hunter. Maybe you're fit to poke 
+around my workshop here. I've been wanting another apprentice. So 
+unfortunate what happened to Skref, what with the disembowelment and all. 
+Take a seat, there.
+      </text>
+      <choice GotoID="Start Weirdwire Conduit">Alright.</choice>
+    </node>
+    <node ID="Start" IfNotHaveQuest="Weirdwire Conduit.. Eureka!">
+      <text>
+My dear, prodigal fool! Are you ready for your assignment?
+      </text>
+      <choice GotoID="Start Weirdwire Conduit">Alright.</choice>
+      <choice GotoID="End">No. I'm not interested.</choice>
+    </node>
+    <node ID="Start Weirdwire Conduit">
+      <text>
+Now, let me explain. I'm on the cusp of a grand discovery. When I'm done 
+assembling the Weirdwire Conduit, you'll be able to speak to anyone from 
+here to Caiafas! First, though, I'm going to need some &amp;rcopper wire&amp;y. As 
+much as you can find -- at least two hundred feet. You should be able to 
+scavenge enough from the rust wells and nearby caves.
+      </text>
+      <choice GotoID="End" StartQuest="Weirdwire Conduit.. Eureka!">As you say. I'll go fetch the wire.</choice>
+      <choice GotoID="End">No. I'm not interested.</choice>
+    </node>
+    <node ID="Start" IfHaveQuest="Weirdwire Conduit.. Eureka!" IfNotFinishedQuest="Weirdwire Conduit.. Eureka!">
+      <text>
+The wire! Give it to me!
+      </text>
+      <choice GotoID="GiveWire" IfFinishedQuestStep="Weirdwire Conduit.. Eureka!~Find 200 feet of copper wire">Take the wire.</choice>
+      <choice GotoID="End">I don't have enough yet.</choice>
+    </node>
+    <node ID="GiveWire">
+      <text>
+Yes, yes! Wire! Beautiful wire! Oh, before I forget or cease to care,
+I repaired an old recoiler for you. Use it whenever you wish to return to
+Joppa quickly. Now give me a few minutes alone to attach the wire.
+      </text>
+      <choice GotoID="End" TakeItem="[takeall],[destroy],Wire Strand 1,Wire Strand 3,Wire Strand 10,Wire Strand 20,Wire Strand 50" CompleteQuestStep="Weirdwire Conduit.. Eureka!~Return to Argyve" IdGift="Joppa Recoiler" GiveItem="Joppa Recoiler">I will return.</choice>
+    </node>
+    <node ID="Start" IfNotHaveQuest="A Canticle for Barathrum">
+      <text>
+It's working! Genius! They said it couldn't be done. They said I was mad!
+They were all ... what's this? What *is* that? Wait! It's repeating itself.
+
+&amp;w*Argyve mumbles to himself for several minutes.*&amp;y
+
+Apprentice! Come, here! Something very strange has happened. The Conduit is
+picking up a signal, some sort of repeating transmission. I cannot decipher
+it, however. I lack cryptogull eggs and, well, never you mind! I have a 
+great task for you, my apprentice. Do you accept it?
+      </text>
+      <choice GotoID="Canticle1">Can I know what it is first?</choice>
+    </node>
+    <node ID="Canticle1">
+      <text>
+Very well. You must seek out Barathrum the Old. He is the eldest and wisest
+tinker alive. He lives with his followers the Barathrumites in the cavern
+called Grit Gate to the northeast, amongst the ruins of Qud. He will know 
+what to make of the signal.
+</text>
+      <choice GotoID="Canticle2">Who are these Barathrumites?</choice>
+      <choice GotoID="Canticle3">I require no further information. I will go.</choice>
+    </node>
+    <node ID="Canticle2">
+      <text>
+They are disciples of Barathrum. Mostly they are Urshiib, like their mentor.
+Mutant albino cave bears. With quills to boot! A thousand years ago 
+Barathrum and his kin crossed the Homs Delta into the heart of Qud. He has 
+spent centuries fiddling with the tokens of antiquity in his underground 
+workshops. If he cannot decipher the signal, no one can.
+      </text>
+      <choice GotoID="Canticle3" IfNotHaveQuest="A Canticle for Barathrum">I accept your task, Argyve.</choice>
+      <choice GotoID="End" IfNotHaveQuest="A Canticle for Barathrum">Mutant cave bears? No, thanks.</choice>
+      <choice GotoID="End" IfHaveQuest="A Canticle for Barathrum">Farewell, Argyve</choice>
+    </node>
+    <node ID="Canticle3">
+      <text>
+Splendid, apprentice, splendid! I've recorded the signal onto this disc.
+You'll need to guard it with your life, I'm afraid.
+
+Also, I'll need to rig up a droid scrambler for you. The Barathrumites have
+programmed several waydroids to guard the approach to Grit Gate. With the
+scrambler, you'll have no need to worry about them. Wait there.
+
+&amp;w*Argyve mumbles to himself for several minutes.*&amp;y
+
+There you go. Now, off with you! May you live long enough to do my bidding.
+Away, away!
+      </text>
+      <choice GotoID="End" StartQuest="A Canticle for Barathrum" IdGift="Droid Scrambler,Argyve's Data Disk" GiveItem="Droid Scrambler,Argyve's Data Disk">Farewell, Argyve.</choice>
+    </node>
+    <node ID="Start" IfHaveQuest="A Canticle for Barathrum">
+      <text>
+My apprentice! What?
+      </text>
+      <choice GotoID="Canticle2">Who are the Barathrumites?</choice>
+      <choice GotoID="End">Farewell, Argyve</choice>
+    </node>
+  </conversation>
+  
+</conversations>

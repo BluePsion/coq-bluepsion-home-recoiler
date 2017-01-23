@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<quests>
+  <quest Name="The Brooder" Manager="BP_QMTheBrooder" Level="4">
+
+    <step Name="Find Feathers" XP="0">
+      <text>Find three beautiful feathers: 0/3 feathers found.</text>
+    </step>
+    
+    <step Name="Return to the bird" XP="75">
+      <text>Return to the chrome bird with the fine feathers.</text>
+    </step>
+    
+    <step Name="Fetch an artifact" XP="75">
+    <text>Bring the bird nourishment in the form of an artifact.</text>
+    </step>
+
+  </quest>
+  
+  <quest Name="Egg Inspector" Manager="BP_QMEggInspector" Level="4">
+  <step Name="Find an expert">
+  <text>Find someone who will be interested in this the egg.</text>
+  </step>
+  
+  </quest>
+  
+  
+</quests>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+    <object Name="BP Custom Recoiler" Inherits="Item">
+    <part Name="Render" DisplayName="&amp;yrecoiler" ColorString="&amp;y" RenderString="004" RenderLayer="5"></part>
+    <part Name="Physics" Category="Tools"></part>
+    <part Name="Examiner" UnknownDisplayName="&amp;csmall stone" AlternateDisplayName="small engraved stone" Complexity="1" Understanding="1"></part>
+    <part Name="BP_Custom_Teleporter" DestinationZone="JoppaWorld.22.14.1.0.13" DestinationX="37" DestinationY="23" ChargeUse="2500"></part>
+    <part Name="Description" Short="A small crystalline disk, with dual recessed buttons on top."></part>
+    <part Name="Commerce" Value="25"></part>
+    <part Name="TinkerItem" Bits="123" CanDisassemble="true" CanBuild="true" CanRepair="true"></part>
+    <part Name="BPEtching"></part>
+    <part Name="EnergyCellSocket" SlotType="EnergyCell"></part>
+    <tag Name="Tier" Value="2"></tag>
+</object>
+
+<object Name="BP PlatBird" Inherits="NPC">
+    <part Name="Render" DisplayName="A shiny bird" Tile="Creatures/sw_crow.bmp" RenderString="B" ColorString="&amp;y"></part>
+    <part Name="ConversationScript" ConversationID="BP PlatBird"></part>
+    <part Name="Brain" Wanders="false" Hostile="false" Factions="Joppa-100"></part>    
+    <part Name="Description" Short="A shining metal creature, with hinged wings and eyes that shine with a cold bright light."></part>
+    <stat Name="Level" Value="20"></stat>
+    <part Name="GivesRep"></part>    
+    <xtagGrammar Proper="true"></xtagGrammar>
+  </object>
+  
+    <object Name="Argyve" Load="Merge">
+    <part Name="ConversationScript" ConversationID="BP JoppaArgyve"></part>
+  </object>
+  
+</objects>
